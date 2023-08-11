@@ -26,3 +26,16 @@ def bitwise_or(a, b):
 
 def bitwise_nor(a, b):
     return ~(a | b)
+
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    return math.prod(range(1, n + 1))
+
+def fibonacci(n):
+    if n <= 0:
+        raise ValueError("Fibonacci sequence is not defined for non-positive numbers.")
+    a, b = 0, 1
+    for _ in range(n - 1):
+        a, b = b, a + b
+    return a
