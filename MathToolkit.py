@@ -17,3 +17,12 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
+
+def bitwise_and(a, b):
+    return a & b
+
+def bitwise_or(a, b):
+    return a | b
+
+def bitwise_nor(a, b):
+    return ~(a | b)
