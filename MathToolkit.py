@@ -39,3 +39,9 @@ def fibonacci(n):
     for _ in range(n - 1):
         a, b = b, a + b
     return a
+
+def permutation(n, r):
+    return factorial(n) // factorial(n - r)
+
+def combination(n, r):
+    return factorial(n) // (factorial(r) * factorial(n - r))
