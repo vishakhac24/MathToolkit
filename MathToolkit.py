@@ -45,3 +45,19 @@ def permutation(n, r):
 
 def combination(n, r):
     return factorial(n) // (factorial(r) * factorial(n - r))
+
+def mean(numbers):
+    return sum(numbers) / len(numbers)
+
+def mode(numbers):
+    counter = Counter(numbers)
+    max_count = counter.most_common(1)[0][1]
+    return [num for num, count in counter.items() if count == max_count]
+
+def variance(numbers):
+    mean_value = mean(numbers)
+    return sum((x - mean_value) ** 2 for x in numbers) / len(numbers)
+
+def standard_deviation(numbers):
+    return variance(numbers) ** 0.5
+
