@@ -61,3 +61,22 @@ def variance(numbers):
 def standard_deviation(numbers):
     return variance(numbers) ** 0.5
 
+# Dictionary to map function numbers to functions and names
+FUNCTIONS = {
+    1: (add, "Addition"),
+    2: (subtract, "Subtraction"),
+    3: (multiply, "Multiplication"),
+    4: (divide, "Division"),
+    5: (bitwise_and, "Bitwise AND"),
+    6: (bitwise_or, "Bitwise OR"),
+    7: (bitwise_nor, "Bitwise NOR"),
+    8: (factorial, "Factorial"),
+    9: (fibonacci, "Fibonacci"),
+    10: (permutation, "Permutation"),
+    11: (combination, "Combination"),
+    12: (mean, "Mean"),
+    13: (mode, "Mode"),
+    14: (variance, "Variance"),
+    15: (standard_deviation, "Standard Deviation")
+}
+
