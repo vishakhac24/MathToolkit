@@ -93,3 +93,10 @@ def get_user_input(prompt, data_type):
             return user_input
         except ValueError:
             print("Invalid input. Please try again.")
+            
+# Main function to handle user interaction
+def main():
+    while True:
+        print("Available functions:")
+        for func_num, (_, func_name) in FUNCTIONS.items():
+            print(f"{func_num}. {func_name}")
