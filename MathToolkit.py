@@ -111,3 +111,54 @@ def main():
 
             # Retrieve chosen function and its name
             function, function_name = FUNCTIONS[choice]
+
+
+            # Based on the chosen function, gather required inputs and perform the calculation
+            if choice in [1, 2, 3, 4]:
+                a = get_user_input("Enter the first number: ", float)
+                b = get_user_input("Enter the second number: ", float)
+                try:
+                    print(f"Result of {function_name}: {function(a, b)}")
+                except ValueError as e:
+                    print("Error:", str(e))
+
+            elif choice == 5:
+                a = get_user_input("Enter the first number: ", int)
+                b = get_user_input("Enter the second number: ", int)
+                print(f"Result of {function_name}: {function(a, b)}")
+
+            elif choice in [6, 7]:
+                a = get_user_input("Enter the first number: ", int)
+                b = get_user_input("Enter the second number: ", int)
+                print(f"Result of {function_name}: {bin(function(a, b))}")
+
+            elif choice in [8, 9, 10, 11]:
+                n = get_user_input("Enter the value of n: ", int)
+                if choice in [10, 11]:
+                    r = get_user_input("Enter the value of r: ", int)
+                    try:
+                        print(f"Result of {function_name}: {function(n, r)}")
+                    except ValueError as e:
+                        print("Error:", str(e))
+                else:
+                    try:
+                        print(f"Result of {function_name}: {function(n)}")
+                    except ValueError as e:
+                        print("Error:", str(e))
+
+            elif choice in [12, 13, 14, 15]:
+                numbers = []
+                while True:
+                    num = get_user_input("Enter a number (or 'done' to finish): ", str)
+                    if num.lower() == 'done':
+                        break
+                    numbers.append(float(num))
+                try:
+                    print(f"Result of {function_name}: {function(numbers)}")
+                except ValueError as e:
+                    print("Error:", str(e))
+
+        else:
+            print("Invalid choice. Please enter a valid function number.")
+
+
