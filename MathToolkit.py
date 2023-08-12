@@ -134,8 +134,10 @@ def main():
                 print(f"Result of {function_name}: {bin(function(a, b))}")
 
             elif choice in [8, 9, 10, 11]:
+                # n refers to total items in terms of Permutations & Combinations
                 n = get_user_input("Enter the value of n: ", int)
                 if choice in [10, 11]:
+                    # r refers to selected items in terms of Permutations & Combinations
                     r = get_user_input("Enter the value of r: ", int)
                     try:
                         print(f"Result of {function_name}: {function(n, r)}")
