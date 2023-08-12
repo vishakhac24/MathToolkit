@@ -162,4 +162,6 @@ def main():
         else:
             print("Invalid choice. Please enter a valid function number.")
 
-
+# Run the main function when the script is executed
+if __name__ == "__main__":
+    main()
