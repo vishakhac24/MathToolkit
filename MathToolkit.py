@@ -82,7 +82,7 @@ FUNCTIONS = {
     12: (mean, "Mean"),
     13: (mode, "Mode"),
     14: (variance, "Variance"),
-    15: (standard_deviation, "Standard Deviation")
+    15: (standard_deviation, "Standard Deviation"),
     16: (None, "Exit")
 }
 
