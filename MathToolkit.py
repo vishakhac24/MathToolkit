@@ -84,3 +84,12 @@ FUNCTIONS = {
     14: (variance, "Variance"),
     15: (standard_deviation, "Standard Deviation")
 }
+
+# Function to get user input with data type validation
+def get_user_input(prompt, data_type):
+    while True:
+        try:
+            user_input = data_type(input(prompt))
+            return user_input
+        except ValueError:
+            print("Invalid input. Please try again.")
