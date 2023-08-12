@@ -100,3 +100,14 @@ def main():
         print("Available functions:")
         for func_num, (_, func_name) in FUNCTIONS.items():
             print(f"{func_num}. {func_name}")
+
+        # Get user's choice for the function
+        choice = get_user_input("Enter the number of the function you want to perform: ", int)
+
+        if choice in FUNCTIONS:
+            if choice == 16:
+                print("Exiting the calculator.")
+                break
+
+            # Retrieve chosen function and its name
+            function, function_name = FUNCTIONS[choice]
