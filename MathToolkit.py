@@ -83,6 +83,7 @@ FUNCTIONS = {
     13: (mode, "Mode"),
     14: (variance, "Variance"),
     15: (standard_deviation, "Standard Deviation")
+    16: (None, "Exit")
 }
 
 # Function to get user input with data type validation
