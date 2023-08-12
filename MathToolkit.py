@@ -35,10 +35,15 @@ def factorial(n):
 def fibonacci(n):
     if n <= 0:
         raise ValueError("Fibonacci sequence is not defined for non-positive numbers.")
-    a, b = 0, 1
-    for _ in range(n - 1):
-        a, b = b, a + b
-    return a
+    if n == 1:
+        return [0]
+    if n == 2:
+        return [0, 1]
+    sequence = [0, 1]  # Initialize the sequence with the first two Fibonacci numbers
+    while len(sequence) < n:
+        next_num = sequence[-1] + sequence[-2]  # Calculate the next Fibonacci number
+        sequence.append(next_num)  # Add the next number to the sequence
+    return sequence
 
 def permutation(n, r):
     return factorial(n) // factorial(n - r)
@@ -79,4 +84,3 @@ FUNCTIONS = {
     14: (variance, "Variance"),
     15: (standard_deviation, "Standard Deviation")
 }
-
